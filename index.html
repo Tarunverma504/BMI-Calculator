@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>BMI calculator</title>
+	<link rel="stylesheet" href="mystyle.css">
+	<script src="js.js"></script>
+</head>
+<body onload="func1()">
+	<div class="wrap">
+		<div class="card">
+			<h1>BMI Calculator</h1>
+		</div>
+		<form>
+		<div class="container">
+			<table width="90%">
+				<tr>
+					<td><label>Height</label></td>
+					<td><input type="number" id="h" oninput='Height()'/>
+						<select id="unit" onblur='Height()'>
+							<option selected="selected" value="Meters">in Meters</option>
+							<option value="Feets">in Feets</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Weight</label></td>
+					<td><input type="number" id="w" oninput='Weight()'/>
+						<select id="units" onblur='Weight()'>
+							<option value="Kg" selected="selected">in Kg</option>	
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan='2'><button type="button" id="calculate" onclick='showresult()'><b>Calculate</b></button></td>
+				</tr>
+				<tr>
+					<td><label>Result</label></td>
+					<td style="text-align:left;padding-left:90px"><input  style="border:none ;background-color:#d3d3d3; width:50%;" id="result" disabled/></td>
+				</tr>
+				<tr>
+					<td><label>Reset</label></td>
+					<td style="text-align:left;padding-left:90px"><input  type="reset"style="border:none ;background-color:#d3d3d3; width:50%;"/></td>
+				</tr>
+				<table id="bmi_table">
+					<tr>
+						<th>BMI</th>
+						<th>Weight Status</th>
+					</tr>
+					<tr>
+						<td>Below 18.5</td>
+						<td>Underweight</td>
+					</tr>
+					<tr>
+						<td>18.5—24.9</td>
+						<td>Normal</td>
+					</tr>
+					<tr>
+						<td>25.0—29.9</td>
+						<td>Overweight</td>
+					</tr>
+					<tr>
+						<td>30.0 and Above</td>
+						<td>Obese</td>
+					</tr>
+
+				</table>
+			</table>
+		</div>
+	</form>
+	</div>
+</body>
+</html>
