@@ -23,14 +23,15 @@ function result()
 		if(height>0 && weight>0)
 	{
 		document.getElementById("calculate").disabled = false;
-		console.log("bvhvhgvhb");
 		if(hu=='Meters')
 		{
 			height=height;	
 		}
 		else if(hu=='Feets')
 		{
-			height=height*0.3048;		
+		var f=parseInt(height);
+		var i=(height-f)*100;
+		height=((f*12)+i)*0.0254;		
 		}
 	}
 	else
